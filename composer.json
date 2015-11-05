@@ -1,0 +1,21 @@
+{
+    "name": "umneeq/yii2-color-extractor",
+    "description": "Extract colors from an image like a human would do",
+    "type": "yii2-extension",
+    "keywords": ["yii2","color","extractor","like human"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "umneeq",
+            "email": "umneeq@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "umneeq\\colorextractor\\src\\": ""
+        }
+    }
+}
