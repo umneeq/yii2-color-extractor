@@ -1,6 +1,6 @@
 <?php
 
-namespace umneeq\colorextractor\src;
+namespace umneeq\colorextractor;
 
 /**
  * This is just an example.
