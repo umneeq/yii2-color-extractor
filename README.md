@@ -28,4 +28,4 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \umneeq\colorextractor\src\AutoloadExample::widget(); ?>```
+<?= \umneeq\color-extractor\AutoloadExample::widget(); ?>```
