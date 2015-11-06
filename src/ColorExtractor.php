@@ -12,25 +12,26 @@ use League\ColorExtractor\Client as BaseColorExtractor;
 class ColorExtractor
 {
     /**
-     * @param string $imgPath
-     * @param int $count
-     * @param int $minColorRatio
-     * @return array
-     * @throws Exception
+     * Extract colors from an image like a human would do.
+     * @param string $imagePath
+     * @param int $count. Max palette size
+     * @param int $minColorRatio. Minimum ratio, below colors are ignored (0 - 1)
+     * @return array of colors (hex codes)
+     * @throws Exception if image type not one of the following: 'jpg', 'jpeg', 'png', 'gif'
      */
-    public static function extract($imgPath, $count = 1, $minColorRatio = 0)
+    public static function extract($imagePath, $count = 1, $minColorRatio = 0)
     {
         $client = new BaseColorExtractor;
 
-        switch (getimagesize($imgPath)[2]) {
+        switch (getimagesize($imagePath)[2]) {
             case IMAGETYPE_JPEG:
-                $image = $client->loadJpeg($imgPath);
+                $image = $client->loadJpeg($imagePath);
                 break;
             case IMAGETYPE_PNG:
-                $image = $client->loadPng($imgPath);
+                $image = $client->loadPng($imagePath);
                 break;
             case IMAGETYPE_GIF:
-                $image = $client->loadGif($imgPath);
+                $image = $client->loadGif($imagePath);
                 break;
             default:
                 throw new Exception('Image type must be one of the following: JPEG(JPG), PNG, GIF.');
