@@ -25,6 +25,7 @@ to the require section of your `composer.json` file and run `composer update` co
 Usage
 -----
 > Notification. This extension accept 3 types of images: jpeg(jpg), png, gif
+
 Once the extension is installed, simply use it in your code by:
 
 ```php
@@ -43,6 +44,3 @@ $result = ColorExtractor::extract($imagePath, 4);
     3 => '#CCBBAA',
 ]
 ```
-
-License
--------
